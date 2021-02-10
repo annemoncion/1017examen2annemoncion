@@ -18,10 +18,6 @@
 <script>
 export default {
   name: 'Accueil',
-  components: {
-      Projet,
-      Contact,
-  },
   data() {
       return {
           showProfile: false,
