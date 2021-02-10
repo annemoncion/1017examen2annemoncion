@@ -1,9 +1,9 @@
 <template>
-  <footer>
+  <header>
     <p>
       Un header.
     </p>
-  </footer>
+  </header>
 </template>
 
 <script>
@@ -13,5 +13,10 @@ export default {
 </script>
 
 <style scoped>
+
+header {
+    background-color: burlywood;
+    padding: 2rem;
+}
 
 </style>

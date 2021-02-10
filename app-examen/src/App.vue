@@ -1,12 +1,24 @@
 <template>
   <div id="app">
-    <p>Mon app </p>
+    <Header />
+    <Accueil />
+    <Footer />
   </div>
 </template>
 
 <script>
+import Accueil from './views/Accueil.vue'
+
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Accueil,
+    Header,
+    Footer
+  }
 }
 </script>
 

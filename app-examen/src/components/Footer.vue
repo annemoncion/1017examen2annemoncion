@@ -13,5 +13,8 @@ export default {
 </script>
 
 <style scoped>
-
+footer {
+    background-color: rosybrown;
+    padding: 1rem;
+}
 </style>
