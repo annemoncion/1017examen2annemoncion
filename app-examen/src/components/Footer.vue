@@ -1,7 +1,7 @@
 <template>
   <footer>
     <p>
-      Un footer.
+      Footer.
     </p>
   </footer>
 </template>

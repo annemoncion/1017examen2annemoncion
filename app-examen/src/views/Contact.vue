@@ -1,27 +1,30 @@
 <template>
   <form class="contact">
-    <h2>Contactez-moi</h2>
-    <input type="text" name="lastname" placeholder="Nom" />
-    <input type="text" name="firstname" placeholder="Prénom" />
-    <input type="text" name="email" placeholder="Courriel" />
+    <h2>{{ 'contactMe' | translate }}</h2>
+    <input type="text" name="lastname" :placeholder="'lastName' | translate" />
+    <input type="text" name="firstname" :placeholder="'firstName' | translate" />
+    <input type="text" name="email" :placeholder="'email' | translate" />
     <select name="categorie">
-        <option v-for="(subject, i) in dropdown" :key="i"> {{ subject }}</option>
+        <option v-for="(subject, i) in dropdown" :key="i"> {{ subject | translate }}</option>
     </select>
   </form>
 </template>
 
 <script>
+import { MixinTranslate } from "@/mixins/MixinTranslate.js"
+
 export default {
+  mixins: [MixinTranslate],
   name: 'Projet',
   data() {
       return {
           dropdown: [
-              "Informations générales",
-              "Soumission",
-              "Question technique"
+              "generalInfo",
+              "soumission",
+              "technicalQuestion"
           ]
       }
-  }
+  },
 }
 </script>
 

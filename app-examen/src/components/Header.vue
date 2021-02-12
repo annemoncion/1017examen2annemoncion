@@ -1,7 +1,7 @@
 <template>
   <header>
     <p>
-      Un header.
+      Header.
     </p>
   </header>
 </template>

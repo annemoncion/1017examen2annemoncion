@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <nav>
-      <router-link v-for="(item, i) in menuItems" :key="i" :to="item.path">{{ item.name }}</router-link>
+      <router-link v-for="(item, i) in menuItems" :key="i" :to="item.path">{{ item.name | translate }}</router-link>
     </nav>
     <router-view />
     <Footer />
@@ -12,8 +12,10 @@
 <script>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import { MixinTranslate } from "@/mixins/MixinTranslate.js"
 
 export default {
+  mixins: [MixinTranslate],
   name: 'App',
   components: {
     Header,
@@ -23,15 +25,15 @@ export default {
     return {
       menuItems: [
         {
-          name: "Accueil",
+          name: "homePage",
           path: "/",
         },
         {
-          name: "Projets",
+          name: "projects",
           path: "/projets",
         },
         {
-          name: "Contact",
+          name: "contact",
           path: "/contact",
         }
       ]
