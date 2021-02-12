@@ -9,7 +9,7 @@
     <div v-if="showProfile" class="profile">
         <p><strong>{{ 'name' | translate }}:</strong> Anne Moncion</p>
         <p><strong>{{ 'age' | translate }}:</strong> 27 ans</p>
-        <p><strong>{{ 'profession' | translate }}:</strong> Développeuse Front-end</p>
+        <p><strong>{{ 'profession' | translate }}:</strong> Développeuse front-end</p>
         <p><strong>{{ 'hobbies' | translate }}:</strong> Couture</p>
     </div>
   </div>
@@ -48,12 +48,12 @@ export default {
 
 .profile {
     background-color: palegreen;
-    padding: 4rem 1rem;
+    padding: 4rem 2rem;
 }
 
 p {
-    margin: 0 auto;
-    max-width: 600px;
+    margin: 0 auto 1rem;
+    text-align: left;
 }
 
 </style>
