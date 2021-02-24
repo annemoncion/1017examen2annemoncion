@@ -1,11 +1,12 @@
 # Déploiement
-### Serveur utilisé
+## Serveur utilisé
 GitHub Pages
 
-**Pourquoi?** Comme le code du site web est déjà maintenu à jour sur GitHub, que la mise en place du serveur est d'une simplicité désarmante, et que j'adhère à la philosophie open source de la plateforme, cela semblait une solution évidente.
+**Pourquoi?** Comme le code du site web est déjà maintenu à jour sur GitHub, que la mise en place du service est d'une simplicité désarmante, et que j'adhère à la philosophie open source de la plateforme, cela semblait une solution évidente.
 
-### Étapes
+## Étapes de déploiement
 
+Considérant que le dépôt a déjà été cloné localement et que les changements ont été apportés...
 1. Faire rouler la commande <code>npm run build</code>.
 2. Pousser les changements sur GitHub à l'aide des commandes git:
     1. <code>git add /dist</code>
