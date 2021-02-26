@@ -1,6 +1,6 @@
 <template>
   <div class="projects">
-    <h2>Mes projets</h2>
+    <h2>{{ 'myProjects' | translate }}</h2>
     <ul>
         <li v-for="(project, i) in projects" :key="i"> {{ project }}</li>
     </ul>
@@ -8,7 +8,10 @@
 </template>
 
 <script>
+import { MixinTranslate } from "@/mixins/MixinTranslate.js"
+
 export default {
+  mixins: [MixinTranslate],
   name: 'Projet',
   data() {
       return {

@@ -1,5 +1,6 @@
 // Variable comprenant toutes les traductions des libellés du site.
 // Chaque objet doit contenir les mêmes propriétés pour que la traduction soit fonctionnelle partout.
+
 const TRANSLATIONS = {
     en: {
         greetings: "Hi",
@@ -11,6 +12,7 @@ const TRANSLATIONS = {
         contactMe: "Join us",
         firstName: "Firstname",
         lastName: "Lastname",
+        name: "Name",
         email: "Email",
         categories: "Categories",
         technicalQuestion: "Technical question",
@@ -33,6 +35,7 @@ const TRANSLATIONS = {
         contactMe: "Contactez-moi",
         firstName: "Prénom",
         lastName: "Nom",
+        name: "Nom",
         email: "Courriel",
         categories: "Catégories",
         technicalQuestion: "Question technique",
@@ -49,34 +52,21 @@ const TRANSLATIONS = {
 
 export const MixinTranslate = {
 
-    ready: function() {
-		// S'assurer que la variable de langue existe à la racine du site,
-        // sinon, lui donner la valeur "en" par défaut.
-		if (!this.$root.locale)
-			this.$root.$set('locale', 'en');
-	},
-
-    methods: {
-        translate: function(namespace, locale) {
-
-            // Prioriser la définition de la variable de langue si elle est définit à l'instanciation du mixin.
-			locale = locale || this.locale || this.$root.locale;
-
-			// Récupérer les données de traduction.
-			var data = TRANSLATIONS;
-
-			try {
-                // Parcourir l'objet "data" et trouver la valeur de traduction correspondant à la clé de traduction.
-				var translation = namespace.split('.').reduce(function(a, b) {
-					return typeof a === 'object' ? a[b] : data[a][b];
-				})[locale];
-			} catch(e) {
-                // Si la traduction est introuvable, afficher une erreur dans la console.
-				console.warn('Aucune traduction trouvée pour %s en utilisant la langue %s (%s)', namespace, locale, e);
-			}
-            // Retourner la valeur de la traduction.
-			return translation;
-		}
+    filters: {
+        translate: function (value) {
+          if (!value) return '';
+          let data = TRANSLATIONS;
+          // Définir la langue de traduction ici.
+          let locale = 'fr';
+          value = value.toString();
+          
+          if (data[locale][value]) {
+              return data[locale][value];
+          }
+          else {
+              return value;
+          }
+        }
     }
     
 }
