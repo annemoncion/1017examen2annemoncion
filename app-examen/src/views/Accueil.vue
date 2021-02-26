@@ -24,7 +24,7 @@ export default {
     name: 'Accueil',
     data() {
         return {
-            showProfile: true,
+            showProfile: false,
         }
     },
     created() {
