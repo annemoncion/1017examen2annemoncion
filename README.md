@@ -1,5 +1,15 @@
 # Examen final Vue.js
 
+## Statut
+
+En développement.
+
+Les fonctionnalités suivantes n'ont pas été mises en place:
+
+- Accès à un bouton de traduction dans la navigation du site web.
+- Validation et envoi du formulaire de contact.
+- Module de connexion d'un utilisateur.
+
 ## Description sommaire
 
 Ce projet a été réalisé à des fins formatives. L'objectif était de créer un site web avec Vue CLI, incluant trois pages statiques, un router et un module de traductions.
