@@ -28,9 +28,9 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: "history",
   base: process.env.BASE_URL,
   routes,
+  // Si la route change, remonter en haut de la page.
   scrollBehavior() {
     return { x: 0, y: 0 };
   }

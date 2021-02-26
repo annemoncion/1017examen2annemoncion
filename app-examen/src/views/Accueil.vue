@@ -19,6 +19,7 @@
 import { MixinTranslate } from "@/mixins/MixinTranslate.js"
 
 export default {
+    // Comme définit présentement, le filtre de traduction doit être importé dans chaque composant qui l'utilise. Ce serait un comportement à revoir.
     mixins: [MixinTranslate],
     name: 'Accueil',
     data() {
@@ -27,8 +28,10 @@ export default {
         }
     },
     created() {
+        // Coder en dur le booléen qui statut de l'état de l'utilisateur: il peut être connecté ou non.
         let loggedIn = false;
     
+        // Si l'utilisateur est connecté, afficher son profil.
         if (loggedIn) {
             this.showProfile = true;
             console.log(this.showProfile);

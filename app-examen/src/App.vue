@@ -2,6 +2,7 @@
   <div id="app">
     <Header />
     <nav>
+      <!-- Boucler à traver les routes. (Voir objet "menuItems") -->
       <router-link v-for="(item, i) in menuItems" :key="i" :to="item.path">{{ item.name | translate }}</router-link>
     </nav>
     <router-view />
@@ -15,6 +16,7 @@ import Footer from './components/Footer.vue'
 import { MixinTranslate } from "@/mixins/MixinTranslate.js"
 
 export default {
+  // Comme définit présentement, le filtre de traduction doit être importé dans chaque composant qui l'utilise. Ce serait un comportement à revoir.
   mixins: [MixinTranslate],
   name: 'App',
   components: {

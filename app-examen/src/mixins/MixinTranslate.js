@@ -54,15 +54,24 @@ export const MixinTranslate = {
 
     filters: {
         translate: function (value) {
+          // Si la clé de traduction passée en paramètre est introuvable, retourner un string vide.  
           if (!value) return '';
+
+          // Récupérer les données de traductions.
           let data = TRANSLATIONS;
+
           // Définir la langue de traduction ici.
           let locale = 'fr';
+
+          // S'assurer que le paramètre est de type "String".
           value = value.toString();
           
+          // Parcourir l'objet "data" dans la langue de traduction choisie et retrouver la valeur de la clé de traduction.
           if (data[locale][value]) {
+              // Retourner la valeur de la clé de traduction.
               return data[locale][value];
           }
+          // Si la valeur de la clé de traduction n'existe pas, retourner la clé elle-même.
           else {
               return value;
           }
