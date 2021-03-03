@@ -1,8 +1,6 @@
 <template>
   <header>
-    <p>
-      Header.
-    </p>
+    <p>Header.</p>
   </header>
 </template>
 

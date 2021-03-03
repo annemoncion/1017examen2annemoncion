@@ -1,8 +1,5 @@
 <template>
   <footer v-copyright>
-    <p >
-      Footer.
-    </p>
   </footer>
 </template>
 
